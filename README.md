@@ -32,8 +32,6 @@ Conventional flat React + Vite layout at the workspace root:
 ├── vite.config.ts
 ├── tsconfig.json
 ├── components.json                    # shadcn config
-├── .npmrc                             # legacy-peer-deps=true
-└── artifacts/startova/.replit-artifact/artifact.toml  # Replit artifact registration
 ```
 
 ## Pages
@@ -74,14 +72,3 @@ npm run dev     # Start dev server on $PORT (default 23434)
 npm run build   # Build to dist/
 npm run serve   # Preview production build
 ```
-
-## Environment
-
-- `PORT` — dev server port (default 23434)
-- `BASE_PATH` — app base path (default "/")
-
-## Notes
-
-- Frontend-only — no backend/API server needed
-- `legacy-peer-deps=true` in .npmrc for React 19 compatibility
-- The artifact is registered at `artifacts/startova/.replit-artifact/artifact.toml` but source lives at workspace root
