@@ -2,7 +2,15 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { MapPin, Phone, Mail, Clock, Send, CheckCircle, ArrowLeft } from "lucide-react";
+import {
+  MapPin,
+  Phone,
+  Mail,
+  Clock,
+  Send,
+  CheckCircle,
+  ArrowLeft,
+} from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { AnimatedSection } from "@/components/ui/AnimatedSection";
 import { SERVICES } from "@/lib/constants";
@@ -23,14 +31,18 @@ export default function Contact() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
 
-  const { register, handleSubmit, formState: { errors } } = useForm<ContactFormValues>({
-    resolver: zodResolver(contactSchema)
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<ContactFormValues>({
+    resolver: zodResolver(contactSchema),
   });
 
   const onSubmit = async (data: ContactFormValues) => {
     setIsSubmitting(true);
     // Simulate API call for static template
-    await new Promise(resolve => setTimeout(resolve, 1500));
+    await new Promise((resolve) => setTimeout(resolve, 1500));
     console.log("Form submitted:", data);
     setIsSubmitting(false);
     setIsSuccess(true);
