@@ -16,6 +16,7 @@ import PrivacyPolicy from "@/pages/PrivacyPolicy";
 import TermsOfService from "@/pages/TermsOfService";
 import NotFound from "@/pages/not-found";
 
+
 const queryClient = new QueryClient();
 
 function Router() {

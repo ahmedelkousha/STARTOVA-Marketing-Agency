@@ -16,7 +16,7 @@ export function Header() {
   const menuRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const handleScroll = () => setIsScrolled(window.scrollY > 20);
+    const handleScroll = () => setIsScrolled(window.scrollY > 2500);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -104,7 +104,7 @@ export function Header() {
       <header
         className={cn(
           "fixed top-0 left-0 right-0 z-105 transition-all duration-300 border-b",
-          isScrolled ? "bg-white py-2" : "bg-white border-transparent py-5",
+          isScrolled ? "bg-white py-2" : "bg-white border-transparent py-2",
         )}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center">
@@ -115,10 +115,10 @@ export function Header() {
                 if (location === "/") {
                   e.preventDefault();
                   window.scrollTo({ top: 0, behavior: "smooth" });
-                  setMobileMenuOpen(false)
+                  setMobileMenuOpen(false);
                 }
               }}
-              className="font-display font-bold text-2xl tracking-tighter text-primary">
+              className={`${isScrolled ? " duration-500 -translate-x-1/2 left-1/2 relative md:translate-x-0 md:left-0" : "left-0 duration-500 relative"} font-display font-bold text-2xl tracking-tight text-primary`}>
               STARTOVA<span className="text-gray-400">.</span>
             </Link>
 
@@ -258,7 +258,7 @@ export function Header() {
                     if (location === "/") {
                       e.preventDefault();
                       window.scrollTo({ top: 0, behavior: "smooth" });
-                      setMobileMenuOpen(false)
+                      setMobileMenuOpen(false);
                     }
                   }}
                   className="text-lg font-medium p-2 hover:bg-gray-50 rounded-lg">
