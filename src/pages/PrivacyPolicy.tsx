@@ -1,11 +1,20 @@
 import { AnimatedSection } from "@/components/ui/AnimatedSection";
+import { ArrowLeft } from "lucide-react";
+import { Link } from "wouter";
 
 export default function PrivacyPolicy() {
   return (
     <main className="bg-white text-black min-h-screen">
       {/* Hero */}
-      <section className="bg-black text-white py-24 sm:py-32">
+      <section className="bg-black text-white pb-26 pt-30 md:pt-24 md:pb-32">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-left">
+                      <Link
+                        href="/"
+                        className="inline-flex items-center text-gray-400 hover:text-white transition-colors mb-12 text-sm font-medium">
+                        <ArrowLeft className="w-4 h-4 mr-2" /> Back to Home
+                      </Link>
+                    </div>
           <AnimatedSection>
             <p className="text-xs sm:text-sm font-semibold text-gray-400 uppercase tracking-widest mb-3">
               Legal

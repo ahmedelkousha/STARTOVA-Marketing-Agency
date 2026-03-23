@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+
+# Block utility files
+Disallow: /src/
+Disallow: /node_modules/
+
+# Sitemap
+Sitemap: https://startova.com/sitemap.xml
+
+# Crawl-delay for polite bots
+Crawl-delay: 10

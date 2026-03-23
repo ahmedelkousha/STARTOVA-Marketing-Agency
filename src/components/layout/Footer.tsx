@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link, useLocation } from "wouter";
+import { Link } from "wouter";
 import {
   ArrowRight,
   Linkedin,
@@ -7,7 +7,6 @@ import {
   Instagram,
   ChevronDown,
 } from "lucide-react";
-
 function FooterAccordion({
   title,
   children,
@@ -16,7 +15,6 @@ function FooterAccordion({
   children: React.ReactNode;
 }) {
   const [open, setOpen] = useState(false);
-  const [location] = useLocation();
 
   return (
     <div className="border-b border-white/10 md:border-none">
@@ -85,19 +83,18 @@ export function Footer() {
                 { label: "Our Services", href: "/services" },
                 { label: "Contact", href: "/contact" },
                 // { label: "Careers", href: "#" },
-              ].map(({ label, href }) => (
-                <li key={label}>
+              ].map((p) => (
+                <li key={p.label}>
                   <Link
                     onClick={(e) => {
-                      if (href === "/") {
-                        e.preventDefault();
+                      if (p.href === "/") {
                         window.scrollTo({ top: 0, behavior: "smooth" });
                       }
                     }}
-                    href={href}
+                    href={p.href}
                     className="text-gray-400 hover:text-white transition-colors text-sm flex items-center gap-2 group">
                     <ArrowRight className="w-3 h-3 opacity-0 -ml-5 group-hover:opacity-100 group-hover:ml-0 transition-all" />
-                    {label}
+                    {p.label}
                   </Link>
                 </li>
               ))}

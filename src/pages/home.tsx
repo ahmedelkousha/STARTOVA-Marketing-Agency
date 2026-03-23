@@ -26,6 +26,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/autoplay";
+import HeroSection from "@/components/HeroSection";
+import Seo from "@/components/SEO";
 
 const PARTNERS = [
   {
@@ -66,63 +68,17 @@ const PARTNERS = [
   },
 ];
 
-
-
 export default function Home() {
 
   return (
-    <>
+    <div>
+      <Seo
+        title="Business Development & Marketing Agency"
+        description="STARTOVA builds integrated growth systems for founders and brands — technology, social media, training, events, and media production. Business Development Driven."
+        canonical="/"
+      />
       {/* ─── HERO ─────────────────────────────────────────────── z-10 ── */}
-      <section className="sticky top-0 z-10 flex min-h-[calc(100vh-5rem)] items-center justify-center overflow-hidden bg-black text-white">
-        <div className="absolute inset-0 z-0">
-          <img
-            src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1600&q=80"
-            alt="Business District"
-            className="w-full h-full object-cover opacity-40 mix-blend-luminosity"
-          />
-          <div className="absolute inset-0 bg-linear-to-t from-black via-black/60 to-transparent" />
-        </div>
-
-        <div className="ls-hero-content relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-            className="max-w-4xl mx-auto">
-            <div className="ls-hero-badge inline-block mb-4 sm:mb-6 px-4 py-1.5 rounded-full border border-white/20 bg-white/5 backdrop-blur-sm text-xs sm:text-sm font-medium tracking-wide">
-              Business Development Driven
-            </div>
-            <h1 className="ls-hero-h1 font-display text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold leading-[1.1] tracking-tight mb-4 sm:mb-6 md:mb-8 text-balance">
-              We Build Systems That{" "}
-              <span className="text-transparent bg-clip-text bg-linear-to-r from-gray-200 to-gray-500">
-                Grow Businesses.
-              </span>
-            </h1>
-            <p className="ls-hero-p text-base sm:text-xl md:text-2xl text-gray-300 mb-6 sm:mb-8 md:mb-10 max-w-3xl mx-auto font-light leading-relaxed">
-              From technology to media, from strategy to execution — we design
-              integrated growth solutions for brands.
-            </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
-              <Link href="/contact">
-                <Button
-                  variant="secondary"
-                  size="lg"
-                  className="ls-hero-btn w-full sm:w-auto rounded-full font-bold text-sm sm:text-base">
-                  Book a Strategy Session
-                </Button>
-              </Link>
-              <Link href="/services">
-                <Button
-                  variant="outline"
-                  size="lg"
-                  className="ls-hero-btn w-full sm:w-auto rounded-full font-bold text-sm sm:text-base">
-                  Explore Our Services
-                </Button>
-              </Link>
-            </div>
-          </motion.div>
-        </div>
-      </section>
+      <HeroSection />
 
       {/* ─── VISION & MISSION ─────────────────────────────────── z-20 ── */}
       <section className="sticky top-0 z-20 h-screen flex items-center justify-center overflow-hidden bg-white">
@@ -508,10 +464,8 @@ export default function Home() {
 
       {/* ─── FINAL CTA ────────────────────────────────────────── z-90 ── */}
       <section className="sticky top-0 z-90 h-screen flex flex-col justify-center items-center overflow-hidden bg-black text-white text-center">
-        <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,var(--tw-gradient-stops))] from-white via-transparent to-transparent pointer-events-none" />
-
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <AnimatedSection>
+          <AnimatedSection className="flex flex-col gap-10">
             <h2 className="ls-cta-h2 font-display text-2xl sm:text-2xl md:text-3xl lg:text-3xl xl:text-4xl font-bold mb-4 sm:mb-6 md:mb-8 leading-tight uppercase">
               Ready to stop buying random services — and start building{" "}
               <span className="underline decoration-3 decoration-gray-200/50 underline-offset-8">
@@ -548,6 +502,6 @@ export default function Home() {
           </AnimatedSection>
         </div>
       </section>
-    </>
+    </div>
   );
 }

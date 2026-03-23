@@ -14,16 +14,30 @@ import {
   ShoppingBag,
   Heart,
   ChevronRight,
+  ArrowLeft,
 } from "lucide-react";
 
 import { AnimatedSection} from "@/components/ui/AnimatedSection";
 import { SERVICES } from "@/lib/constants";
+import Seo from "@/components/SEO";
 
 export default function ServicesPage() {
   return (
     <>
-      <section className="bg-black text-white py-24 md:py-32">
+      <Seo
+        title="Our Integrated Growth Services"
+        description="Explore STARTOVA's five-pillar ecosystem: Technology Solutions, Social Media Strategy, Training & Mentorship, Event Management, and Media Production. Not isolated services — a connected growth system."
+        canonical="/services"
+      />
+      <section className="bg-black text-white pb-26 pt-30 md:pt-24 md:pb-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="text-left">
+            <Link
+              href="/"
+              className="inline-flex items-center text-gray-400 hover:text-white transition-colors mb-12 text-sm font-medium">
+              <ArrowLeft className="w-4 h-4 mr-2" /> Back to Home
+            </Link>
+          </div>
           <AnimatedSection>
             <h1 className="font-display text-5xl md:text-7xl font-bold mb-6">
               Our Integrated Growth Services.
