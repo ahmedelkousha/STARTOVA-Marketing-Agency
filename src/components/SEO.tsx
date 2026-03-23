@@ -2,7 +2,7 @@ import { Helmet } from "react-helmet-async";
 
 const SITE_NAME = "STARTOVA";
 const BASE_URL = "https://startova.com";
-const DEFAULT_OG_IMAGE = `${BASE_URL}/og-image.svg`;
+const DEFAULT_OG_IMAGE = `${BASE_URL}/og-image.png`;
 const DEFAULT_DESCRIPTION =
   "STARTOVA is a Business Development-driven marketing agency. We build integrated growth systems — technology, social media, training, events, and media — designed to grow your business.";
 
