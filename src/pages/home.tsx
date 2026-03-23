@@ -458,10 +458,9 @@ export default function Home() {
 
       {/* ─── FINAL CTA ────────────────────────────────────────── z-90 ── */}
       <section className="sticky top-0 z-90 h-screen flex flex-col justify-center items-center overflow-hidden bg-black text-white text-center">
-        <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,var(--tw-gradient-stops))] from-white via-transparent to-transparent pointer-events-none" />
 
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <AnimatedSection>
+          <AnimatedSection className="flex flex-col gap-10">
             <h2 className="ls-cta-h2 font-display text-2xl sm:text-2xl md:text-3xl lg:text-3xl xl:text-4xl font-bold mb-4 sm:mb-6 md:mb-8 leading-tight uppercase">
               Ready to stop buying random services — and start building{" "}
               <span className="underline decoration-3 decoration-gray-200/50 underline-offset-8">

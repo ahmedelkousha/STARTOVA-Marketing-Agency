@@ -113,12 +113,11 @@ export function Header() {
               href="/"
               onClick={(e) => {
                 if (location === "/") {
-                  e.preventDefault();
                   window.scrollTo({ top: 0, behavior: "smooth" });
                   setMobileMenuOpen(false);
                 }
               }}
-              className={`${isScrolled ? " duration-500 -translate-x-1/2 left-1/2 relative md:translate-x-0 md:left-0" : "left-0 duration-500 relative"} font-display font-bold text-2xl tracking-tight text-primary`}>
+              className={`${isScrolled && location === "/" ? " duration-500 -translate-x-1/2 left-1/2 relative md:translate-x-0 md:left-0" : "left-0 duration-500 relative"} font-display font-bold text-2xl tracking-tight text-primary`}>
               STARTOVA<span className="text-gray-400">.</span>
             </Link>
 
@@ -126,6 +125,12 @@ export function Header() {
             <nav className="hidden md:flex items-center space-x-8">
               <Link
                 href="/"
+                onClick={(e) => {
+                  if (location === "/") {
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                    setMobileMenuOpen(false);
+                  }
+                }}
                 className={cn(
                   "text-sm font-medium transition-colors hover:text-black",
                   location === "/" ? "text-black" : "text-gray-500",

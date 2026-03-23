@@ -1,11 +1,10 @@
 import { useEffect, useRef } from "react";
-import { Link, useLocation } from "wouter";
+import { Link } from "wouter";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Button } from "@/components/ui/Button";
 
 gsap.registerPlugin(ScrollTrigger);
-
 const TOTAL_FRAMES = 200;
 const frameSrcs = Array.from(
   { length: TOTAL_FRAMES },
@@ -33,6 +32,8 @@ export default function HeroSection() {
       const img = new Image();
       img.src = src;
     });
+    window.scrollTo(0, 0);
+
 
     const ctx = gsap.context(() => {
       frameRefs.current.forEach((el, i) => {
@@ -132,6 +133,7 @@ export default function HeroSection() {
 
     return () => {
       ctx.revert();
+       ScrollTrigger.killAll();
     };
   }, []);
 
