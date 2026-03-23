@@ -1,3 +1,14 @@
-<svg width="180" height="180" viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect width="180" height="180" rx="36" fill="#FF3C00"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <rect width="64" height="64" rx="10" fill="white"/>
+  <rect x="0.75" y="0.75" width="62.5" height="62.5" rx="9.5" fill="none" stroke="#e2e8f0" stroke-width="1.5"/>
+  <text
+    x="32"
+    y="47"
+    font-family="Inter, Arial Black, Helvetica Neue, sans-serif"
+    font-size="50"
+    font-weight="900"
+    text-anchor="middle"
+    fill="#000000"
+    letter-spacing="-3"
+  >S</text>
 </svg>

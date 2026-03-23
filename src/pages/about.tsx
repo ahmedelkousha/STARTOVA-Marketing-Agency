@@ -2,10 +2,15 @@ import { Link } from "wouter";
 import { ArrowRight, Zap, Target, PenTool, LayoutGrid, Rocket, ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { AnimatedSection, StaggerContainer, StaggerItem } from "@/components/ui/AnimatedSection";
-
+import Seo from "@/components/SEO";
 export default function About() {
   return (
     <>
+      <Seo
+        title="About Us — Not a Traditional Marketing Agency"
+        description="STARTOVA is a Business Development-driven firm that combines technology, strategy, and media to build scalable systems. Growth without structure is temporary."
+        canonical="/about"
+      />
       <section className="bg-black text-white pb-26 pt-30 md:pt-24 md:pb-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="text-left">

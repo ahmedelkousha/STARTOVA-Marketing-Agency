@@ -19,10 +19,16 @@ import {
 
 import { AnimatedSection} from "@/components/ui/AnimatedSection";
 import { SERVICES } from "@/lib/constants";
+import Seo from "@/components/SEO";
 
 export default function ServicesPage() {
   return (
     <>
+      <Seo
+        title="Our Integrated Growth Services"
+        description="Explore STARTOVA's five-pillar ecosystem: Technology Solutions, Social Media Strategy, Training & Mentorship, Event Management, and Media Production. Not isolated services — a connected growth system."
+        canonical="/services"
+      />
       <section className="bg-black text-white pb-26 pt-30 md:pt-24 md:pb-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="text-left">

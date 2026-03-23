@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/Button";
 import { AnimatedSection } from "@/components/ui/AnimatedSection";
 import { SERVICES } from "@/lib/constants";
 import { Link } from "wouter";
+import Seo from "@/components/SEO";
 
 const contactSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
@@ -37,6 +38,11 @@ export default function Contact() {
 
   return (
     <>
+      <Seo
+        title="Contact Us — Book a Strategy Call"
+        description="Ready to build structured growth? Contact STARTOVA to book a strategy session. We respond within 24 hours. New York, NY — hello@startova.agency"
+        canonical="/contact"
+      />
       <section className="bg-black text-white pb-26 pt-30 md:pt-24 md:pb-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="text-left">

@@ -8,7 +8,7 @@ gsap.registerPlugin(ScrollTrigger);
 const TOTAL_FRAMES = 200;
 const frameSrcs = Array.from(
   { length: TOTAL_FRAMES },
-  (_, i) => `/hero-frames/${String(i + 1).padStart(3, "0")}.png`,
+  (_, i) => `/hero-frames/${String(i + 1).padStart(3, "0")}.webp`,
 );
 
 export default function HeroSection() {

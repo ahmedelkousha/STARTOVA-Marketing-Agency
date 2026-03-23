@@ -27,6 +27,7 @@ import { Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/autoplay";
 import HeroSection from "@/components/HeroSection";
+import Seo from "@/components/SEO";
 
 const PARTNERS = [
   {
@@ -71,6 +72,11 @@ export default function Home() {
 
   return (
     <div>
+      <Seo
+        title="Business Development & Marketing Agency"
+        description="STARTOVA builds integrated growth systems for founders and brands — technology, social media, training, events, and media production. Business Development Driven."
+        canonical="/"
+      />
       {/* ─── HERO ─────────────────────────────────────────────── z-10 ── */}
       <HeroSection />
 
@@ -458,7 +464,6 @@ export default function Home() {
 
       {/* ─── FINAL CTA ────────────────────────────────────────── z-90 ── */}
       <section className="sticky top-0 z-90 h-screen flex flex-col justify-center items-center overflow-hidden bg-black text-white text-center">
-
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <AnimatedSection className="flex flex-col gap-10">
             <h2 className="ls-cta-h2 font-display text-2xl sm:text-2xl md:text-3xl lg:text-3xl xl:text-4xl font-bold mb-4 sm:mb-6 md:mb-8 leading-tight uppercase">
