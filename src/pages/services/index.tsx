@@ -17,7 +17,7 @@ import {
   ArrowLeft,
 } from "lucide-react";
 
-import { AnimatedSection} from "@/components/ui/AnimatedSection";
+import { AnimatedSection } from "@/components/ui/AnimatedSection";
 import { SERVICES } from "@/lib/constants";
 import Seo from "@/components/SEO";
 

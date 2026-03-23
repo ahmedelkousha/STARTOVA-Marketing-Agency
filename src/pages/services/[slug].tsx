@@ -2,20 +2,24 @@ import { useRoute } from "wouter";
 import { Link } from "wouter";
 import { ArrowLeft, CheckCircle2 } from "lucide-react";
 import { Button } from "@/components/ui/Button";
-import { AnimatedSection, StaggerContainer, StaggerItem } from "@/components/ui/AnimatedSection";
+import {
+  AnimatedSection,
+  StaggerContainer,
+  StaggerItem,
+} from "@/components/ui/AnimatedSection";
 import { SERVICES } from "@/lib/constants";
 import NotFound from "@/pages/not-found";
 import Seo from "@/components/SEO";
 
 export default function ServiceDetail() {
   const [match, params] = useRoute("/services/:slug");
-  
+
   if (!match || !params?.slug) return <NotFound />;
-  
-  const service = SERVICES.find(s => s.slug === params.slug);
-  
+
+  const service = SERVICES.find((s) => s.slug === params.slug);
+
   if (!service) return <NotFound />;
-const seoDescription = `${service.description} ${service.bullets.map((b) => b.title).join(", ")}. STARTOVA — Business Development Driven.`;
+  const seoDescription = `${service.description} ${service.bullets.map((b) => b.title).join(", ")}. STARTOVA — Business Development Driven.`;
   return (
     <>
       <Seo

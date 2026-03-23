@@ -69,7 +69,6 @@ const PARTNERS = [
 ];
 
 export default function Home() {
-
   return (
     <div>
       <Seo

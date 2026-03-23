@@ -1,7 +1,19 @@
 import { Link } from "wouter";
-import { ArrowRight, Zap, Target, PenTool, LayoutGrid, Rocket, ArrowLeft } from "lucide-react";
+import {
+  ArrowRight,
+  Zap,
+  Target,
+  PenTool,
+  LayoutGrid,
+  Rocket,
+  ArrowLeft,
+} from "lucide-react";
 import { Button } from "@/components/ui/Button";
-import { AnimatedSection, StaggerContainer, StaggerItem } from "@/components/ui/AnimatedSection";
+import {
+  AnimatedSection,
+  StaggerContainer,
+  StaggerItem,
+} from "@/components/ui/AnimatedSection";
 import Seo from "@/components/SEO";
 export default function About() {
   return (
