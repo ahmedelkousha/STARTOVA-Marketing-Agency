@@ -1,6 +1,5 @@
 import { Link } from "wouter";
 import {
-  ArrowRight,
   Zap,
   Target,
   PenTool,
@@ -8,13 +7,14 @@ import {
   Rocket,
   ArrowLeft,
 } from "lucide-react";
-import { Button } from "@/components/ui/Button";
 import {
   AnimatedSection,
   StaggerContainer,
   StaggerItem,
 } from "@/components/ui/AnimatedSection";
 import Seo from "@/components/SEO";
+import { CtaSection } from "@/components/CtaSection";
+
 export default function About() {
   return (
     <>
@@ -150,24 +150,13 @@ export default function About() {
         </div>
       </section>
 
-      <section className="py-24 bg-white text-center">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <AnimatedSection>
-            <h2 className="font-display text-4xl font-bold mb-8">
-              Let's Build Your System
-            </h2>
-            <p className="text-xl text-gray-600 mb-10">
-              Stop piecing together a strategy from different vendors. Partner
-              with a firm that sees the whole picture.
-            </p>
-            <Link href="/contact">
-              <Button size="lg" className="rounded-full font-bold">
-                Book a Strategy Call <ArrowRight className="ml-2 w-4 h-4" />
-              </Button>
-            </Link>
-          </AnimatedSection>
-        </div>
-      </section>
+      <CtaSection
+        theme="light"
+        title="Let's Build Your System"
+        description="Stop piecing together a strategy from different vendors. Partner with a firm that sees the whole picture."
+        primaryLink="/contact"
+        primaryText="Book a Strategy Call"
+      />
     </>
   );
 }

@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { Link, useLocation } from "wouter";
 import { Menu, X, ChevronDown, CalendarDays } from "lucide-react";
-import { Button } from "@/components/ui/Button";
+import { Button } from "@/components/ui/button";
 import { SERVICES } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 import { motion, AnimatePresence } from "framer-motion";
@@ -111,7 +111,7 @@ export function Header() {
             {/* Logo */}
             <Link
               href="/"
-              onClick={(e) => {
+              onClick={() => {
                 if (location === "/") {
                   window.scrollTo({ top: 0, behavior: "smooth" });
                   setMobileMenuOpen(false);
@@ -125,7 +125,7 @@ export function Header() {
             <nav className="hidden md:flex items-center space-x-8">
               <Link
                 href="/"
-                onClick={(e) => {
+                onClick={() => {
                   if (location === "/") {
                     window.scrollTo({ top: 0, behavior: "smooth" });
                     setMobileMenuOpen(false);

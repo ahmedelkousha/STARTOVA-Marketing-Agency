@@ -1,12 +1,8 @@
 import { useRoute } from "wouter";
 import { Link } from "wouter";
 import { ArrowLeft, CheckCircle2 } from "lucide-react";
-import { Button } from "@/components/ui/Button";
-import {
-  AnimatedSection,
-  StaggerContainer,
-  StaggerItem,
-} from "@/components/ui/AnimatedSection";
+import { Button } from "@/components/ui/button";
+import { AnimatedSection } from "@/components/ui/AnimatedSection";
 import { SERVICES } from "@/lib/constants";
 import NotFound from "@/pages/not-found";
 import Seo from "@/components/SEO";

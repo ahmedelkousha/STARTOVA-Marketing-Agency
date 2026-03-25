@@ -11,7 +11,7 @@ import {
   CheckCircle,
   ArrowLeft,
 } from "lucide-react";
-import { Button } from "@/components/ui/Button";
+import { Button } from "@/components/ui/button";
 import { AnimatedSection } from "@/components/ui/AnimatedSection";
 import { SERVICES } from "@/lib/constants";
 import { Link } from "wouter";

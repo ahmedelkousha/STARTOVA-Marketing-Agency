@@ -89,7 +89,7 @@
     @apply bg-white/90 backdrop-blur-md border-b border-border/50;
   }
 }
-/* globals.css or index.css */
+
 @media (orientation: landscape) and (max-height: 600px) {
 
   /* Hero */
@@ -126,7 +126,7 @@
   .ls-service-icon-wrap { width: 1.375rem; height: 1.375rem; margin-bottom: 0.375rem; border-radius: 0.25rem; }
   .ls-service-icon-wrap svg { width: 0.625rem; height: 0.625rem; }
   .ls-service-title { font-size: 0.55rem; margin-bottom: 0.25rem; }
-  .ls-service-desc { font-size: 0.5rem; margin-bottom: 0.375rem; -webkit-line-clamp: 2; }
+  .ls-service-desc { font-size: 0.5rem; margin-bottom: 0.375rem; -webkit-line-clamp: 2; line-clamp: 2; }
   .ls-service-link { font-size: 0.5rem; }
   .ls-service-link svg { width: 0.5rem; height: 0.5rem; }
 
@@ -143,7 +143,7 @@
   .ls-why-card { padding: 0.625rem; border-radius: 0.75rem; }
   .ls-why-icon { width: 1.125rem; height: 1.125rem; margin-bottom: 0.375rem; }
   .ls-why-title { font-size: 0.6rem; margin-bottom: 0.25rem; }
-  .ls-why-desc { font-size: 0.55rem; line-height: 1.35; -webkit-line-clamp: 2; }
+  .ls-why-desc { font-size: 0.55rem; line-height: 1.35; -webkit-line-clamp: 2; line-clamp: 2; }
 
   /* Who We Work With */
   .ls-who-h2 { font-size: 0.9rem; margin-bottom: 0.25rem; }

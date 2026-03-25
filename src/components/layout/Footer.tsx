@@ -86,7 +86,7 @@ export function Footer() {
               ].map((p) => (
                 <li key={p.label}>
                   <Link
-                    onClick={(e) => {
+                    onClick={() => {
                       if (p.href === "/") {
                         window.scrollTo({ top: 0, behavior: "smooth" });
                       }
