@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { Link, useLocation } from "wouter";
 import { Menu, X, ChevronDown, CalendarDays } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/Button";
 import { SERVICES } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 import { motion, AnimatePresence } from "framer-motion";

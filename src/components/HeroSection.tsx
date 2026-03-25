@@ -2,7 +2,7 @@ import { useEffect, useRef } from "react";
 import { Link } from "wouter";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/Button";
 
 gsap.registerPlugin(ScrollTrigger);
 const TOTAL_FRAMES = 200;
@@ -133,7 +133,7 @@ export default function HeroSection() {
 
     return () => {
       ctx.revert();
-       ScrollTrigger.killAll();
+      ScrollTrigger.killAll();
     };
   }, []);
 

@@ -1,7 +1,7 @@
 import { useRoute } from "wouter";
 import { Link } from "wouter";
 import { ArrowLeft, CheckCircle2 } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/Button";
 import { AnimatedSection } from "@/components/ui/AnimatedSection";
 import { SERVICES } from "@/lib/constants";
 import NotFound from "@/pages/not-found";
