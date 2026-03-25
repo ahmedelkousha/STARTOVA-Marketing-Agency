@@ -2,37 +2,6 @@
 
 A professional marketing agency website built with React + Vite. Black/white/grey design with Framer Motion animations.
 
-## Structure
-
-Conventional flat React + Vite layout at the workspace root:
-
-```
-/
-├── src/
-│   ├── App.tsx                        # Router + layout
-│   ├── main.tsx                       # Entry point
-│   ├── index.css                      # Global styles + Tailwind
-│   ├── components/
-│   │   ├── layout/
-│   │   │   ├── Header.tsx             # Sticky header: logo | nav | CTA
-│   │   │   └── Footer.tsx
-│   │   └── ui/                        # shadcn/ui components
-│   ├── lib/
-│   │   ├── constants.ts               # Services config, nav links
-│   │   └── utils.ts                   # cn() helper
-│   └── pages/
-│       ├── home.tsx
-│       ├── about.tsx
-│       ├── contact.tsx
-│       └── services/
-│           └── [slug].tsx             # Dynamic service pages
-├── public/                            # Static assets
-├── index.html
-├── package.json
-├── vite.config.ts
-├── tsconfig.json
-├── components.json                    # shadcn config
-```
 
 ## Pages
 

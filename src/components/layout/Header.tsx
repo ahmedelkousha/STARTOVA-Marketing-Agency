@@ -111,7 +111,7 @@ export function Header() {
             {/* Logo */}
             <Link
               href="/"
-              onClick={(e) => {
+              onClick={() => {
                 if (location === "/") {
                   window.scrollTo({ top: 0, behavior: "smooth" });
                   setMobileMenuOpen(false);
@@ -125,7 +125,7 @@ export function Header() {
             <nav className="hidden md:flex items-center space-x-8">
               <Link
                 href="/"
-                onClick={(e) => {
+                onClick={() => {
                   if (location === "/") {
                     window.scrollTo({ top: 0, behavior: "smooth" });
                     setMobileMenuOpen(false);

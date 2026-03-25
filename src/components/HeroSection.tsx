@@ -133,7 +133,7 @@ export default function HeroSection() {
 
     return () => {
       ctx.revert();
-       ScrollTrigger.killAll();
+      ScrollTrigger.killAll();
     };
   }, []);
 

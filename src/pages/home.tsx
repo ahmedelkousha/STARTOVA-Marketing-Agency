@@ -13,7 +13,6 @@ import {
   Shield,
   ShoppingBag,
   Heart,
-  ChevronRight,
 } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import {
@@ -22,51 +21,13 @@ import {
   StaggerItem,
 } from "@/components/ui/AnimatedSection";
 import { SERVICES } from "@/lib/constants";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/autoplay";
 import HeroSection from "@/components/HeroSection";
 import Seo from "@/components/SEO";
-
-const PARTNERS = [
-  {
-    name: "Google",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg",
-  },
-  {
-    name: "Microsoft",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/9/96/Microsoft_logo_%282012%29.svg",
-  },
-  {
-    name: "Salesforce",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/f/f9/Salesforce.com_logo.svg",
-  },
-  {
-    name: "HubSpot",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/3/3f/HubSpot_Logo.svg",
-  },
-  {
-    name: "Shopify",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/0/0e/Shopify_logo_2018.svg",
-  },
-  {
-    name: "Stripe",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/b/ba/Stripe_Logo%2C_revised_2016.svg",
-  },
-  {
-    name: "Slack",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/d/d5/Slack_icon_2019.svg",
-  },
-  {
-    name: "Notion",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/4/45/Notion_app_logo.png",
-  },
-  {
-    name: "Zoom",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/1/11/Zoom_Logo_2022.svg",
-  },
-];
+import { PartnerMarquee } from "@/components/PartnerMarquee";
+import { GrowthEcosystem } from "@/components/GrowthEcosystem";
+import { CtaSection } from "@/components/CtaSection";
 
 export default function Home() {
   return (
@@ -135,55 +96,7 @@ export default function Home() {
             </div>
           </AnimatedSection>
 
-          <div className="mb-4 sm:mb-6 relative">
-            {/* Left shadow */}
-            <div
-              className="absolute left-0 top-0 h-full w-16 sm:w-24 md:w-32 z-10 pointer-events-none"
-              style={{
-                background:
-                  "linear-gradient(to right, #000000 0%, transparent 100%)",
-              }}
-            />
-
-            {/* Right shadow */}
-            <div
-              className="absolute right-0 top-0 h-full w-16 sm:w-24 md:w-32 z-10 pointer-events-none"
-              style={{
-                background:
-                  "linear-gradient(to left, #000000 0%, transparent 100%)",
-              }}
-            />
-            <Swiper
-              dir="ltr"
-              modules={[Autoplay]}
-              slidesPerView={2}
-              spaceBetween={24}
-              loop={true}
-              speed={2400}
-              autoplay={{
-                delay: 0,
-                disableOnInteraction: false,
-                pauseOnMouseEnter: true,
-              }}
-              breakpoints={{
-                480: { slidesPerView: 3, spaceBetween: 28 },
-                768: { slidesPerView: 4, spaceBetween: 32 },
-                1024: { slidesPerView: 5, spaceBetween: 40 },
-              }}>
-              {PARTNERS.map((partner, i) => (
-                <SwiperSlide key={`row1-${i}`}>
-                  <div className="bg-white flex items-center justify-center h-14 sm:h-16 md:h-20 px-4 sm:px-6 rounded-xl sm:rounded-2xl border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all duration-300 group">
-                    <img
-                      src={partner.logo}
-                      alt={partner.name}
-                      className="max-h-6 sm:max-h-7 md:max-h-8 max-w-20 sm:max-w-25 md:max-w-30 object-contain filter opacity-100 group-hover:opacity-80 transition-opacity duration-300"
-                      draggable={false}
-                    />
-                  </div>
-                </SwiperSlide>
-              ))}
-            </Swiper>
-          </div>
+          <PartnerMarquee />
         </div>
       </section>
 
@@ -299,81 +212,7 @@ export default function Home() {
             </p>
           </AnimatedSection>
 
-          <div className="ls-connects-flow flex flex-col md:flex-row items-center justify-center gap-2 md:gap-0">
-            {[
-              {
-                label: "Technology",
-                icon: Layers,
-                desc: "Digital foundation",
-                color: "bg-black text-white",
-                border: "border-black",
-              },
-              {
-                label: "Marketing",
-                icon: Target,
-                desc: "Reach your market",
-                color: "bg-black text-white",
-                border: "border-black",
-              },
-              {
-                label: "Visibility",
-                icon: Eye,
-                desc: "Build awareness",
-                color: "bg-black text-white",
-                border: "border-black",
-              },
-              {
-                label: "Authority",
-                icon: Shield,
-                desc: "Earn trust & credibility",
-                color: "bg-black text-white",
-                border: "border-black",
-              },
-              {
-                label: "Revenue",
-                icon: Briefcase,
-                desc: "Sustainable growth",
-                color: "bg-black text-white",
-                border: "border-black",
-              },
-            ].map((step, i, arr) => (
-              <AnimatedSection
-                key={step.label}
-                delay={i * 0.15}
-                className="flex flex-col md:flex-row items-center w-full md:w-auto">
-                {/* Step Card */}
-                <div
-                  className={`ls-connects-pill group relative flex flex-row md:flex-col items-center md:items-center gap-3 md:gap-2 bg-white border-2 ${step.border} rounded-2xl px-4 sm:px-5 md:px-4 lg:px-6 py-3 sm:py-4 md:py-5 lg:py-6 hover:${step.color} transition-all duration-300 cursor-default w-full md:w-auto md:min-w-27.5 lg:min-w-32.5 shadow-sm hover:shadow-lg`}>
-                  {/* Step number badge */}
-                  <span className="absolute -top-2.5 -left-2.5 w-5 h-5 sm:w-6 sm:h-6 bg-black text-white text-[9px] sm:text-[10px] font-bold rounded-full flex items-center justify-center group-hover:bg-white group-hover:text-black transition-colors">
-                    {i + 1}
-                  </span>
-
-                  {/* Icon */}
-                  <div className="ls-connects-icon-wrap w-9 h-9 sm:w-10 sm:h-10 md:w-11 md:h-11 lg:w-12 lg:h-12 rounded-xl bg-gray-100 group-hover:bg-white/20 flex items-center justify-center shrink-0 transition-colors">
-                    <step.icon className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-black group-hover:text-white transition-colors" />
-                  </div>
-
-                  {/* Text */}
-                  <div className="flex flex-col md:items-center">
-                    <span className="ls-connects-label font-display font-bold text-sm sm:text-base md:text-sm lg:text-base text-black group-hover:text-white transition-colors leading-tight">
-                      {step.label}
-                    </span>
-                    <span className="ls-connects-desc text-[10px] sm:text-xs text-gray-400 group-hover:text-white/70 transition-colors mt-0.5 md:text-center">
-                      {step.desc}
-                    </span>
-                  </div>
-                </div>
-
-                {/* Connector Arrow */}
-                {i < arr.length - 1 && (
-                  <div className="flex items-center justify-center my-1 md:my-0 md:mx-1 lg:mx-2 shrink-0">
-                    <ChevronRight className="ls-connects-chevron w-5 h-5 sm:w-6 sm:h-6 text-black/70 rotate-90 md:rotate-0" />
-                  </div>
-                )}
-              </AnimatedSection>
-            ))}
-          </div>
+          <GrowthEcosystem />
         </div>
       </section>
 
@@ -462,45 +301,33 @@ export default function Home() {
       </section>
 
       {/* ─── FINAL CTA ────────────────────────────────────────── z-90 ── */}
-      <section className="sticky top-0 z-90 h-screen flex flex-col justify-center items-center overflow-hidden bg-black text-white text-center">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <AnimatedSection className="flex flex-col gap-10">
-            <h2 className="ls-cta-h2 font-display text-2xl sm:text-2xl md:text-3xl lg:text-3xl xl:text-4xl font-bold mb-4 sm:mb-6 md:mb-8 leading-tight uppercase">
-              Ready to stop buying random services — and start building{" "}
-              <span className="underline decoration-3 decoration-gray-200/50 underline-offset-8">
-                structured growth
-              </span>
-              ?
-            </h2>
-            <p className="ls-cta-p text-sm sm:text-base md:text-lg lg:text-xl text-gray-400 mb-6 sm:mb-8 md:mb-12 font-light leading-relaxed">
-              Whether you need a website, an app, social media management, media
-              production, a launch event, or strategic guidance. We build every
-              service with one goal:{" "}
-              <span className="text-white font-semibold">
-                Your Business Growth.
-              </span>
-            </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
-              <Link href="/contact">
-                <Button
-                  variant="secondary"
-                  size="lg"
-                  className="ls-cta-btn w-full sm:w-auto rounded-full font-bold text-sm sm:text-base">
-                  Book Your Strategy Call
-                </Button>
-              </Link>
-              <Link href="/services">
-                <Button
-                  variant="outline"
-                  size="lg"
-                  className="ls-cta-btn w-full sm:w-auto rounded-full font-bold text-sm sm:text-base">
-                  Start Building Today
-                </Button>
-              </Link>
-            </div>
-          </AnimatedSection>
-        </div>
-      </section>
+      <CtaSection
+        isSticky
+        theme="dark"
+        title={
+          <>
+            Ready to stop buying random services — and start building{" "}
+            <span className="underline decoration-3 decoration-gray-200/50 underline-offset-8">
+              structured growth
+            </span>
+            ?
+          </>
+        }
+        description={
+          <>
+            Whether you need a website, an app, social media management, media
+            production, a launch event, or strategic guidance. We build every
+            service with one goal:{" "}
+            <span className="text-white font-semibold">
+              Your Business Growth.
+            </span>
+          </>
+        }
+        primaryLink="/contact"
+        primaryText="Book Your Strategy Call"
+        secondaryLink="/services"
+        secondaryText="Start Building Today"
+      />
     </div>
   );
 }
