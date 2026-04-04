@@ -14,7 +14,7 @@ export const SERVICES = [
       { title: "AI Automation & Smart Systems", desc: "Automate customer follow-ups, lead nurturing, and internal workflows." }
     ],
     callout: "A website is not a brochure. It is your digital sales system. Even if you only request a website — we design it to support expansion, marketing, and automation.",
-    image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=1200&q=80"
+    image: "/technology.webp"
   },
   {
     id: "social-media",
